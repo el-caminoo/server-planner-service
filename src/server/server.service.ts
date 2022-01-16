@@ -1,13 +1,11 @@
 import { Injectable } from '@nestjs/common';
-import {virtualMachine, serverType} from './server.interface';
+import {VirtualMachine, Server} from './server.interface';
 
 
 @Injectable()
 export class ServerService {
 
-    public determineNumberOfServers(serverType: serverType, virtualMachine: Array<virtualMachine>): number {
-        return 
+    public calculate(serverType: Server, virtualMachines: Array<VirtualMachine>): number  {
+        return virtualMachines[0].RAM
     }
 }
-
-

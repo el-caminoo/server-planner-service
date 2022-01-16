@@ -1,10 +1,10 @@
-export interface serverType {
+export interface Server {
     CPU: number;
     RAM: number;
     HDD: number;
 }
 
-export interface virtualMachine {
+export interface VirtualMachine {
     CPU: number;
     RAM: number;
     HDD: number;
