@@ -1,0 +1,19 @@
+version: '3.8'
+
+services: 
+    main:
+        container_name: main
+        build: 
+            context: .
+            dockerfile: ./Dockerfile
+        command: npm run start:prod
+        ports: 
+            - 3000:3000
+        volumes: 
+            - .:/app
+            - /app/node_modules
+        restart: unless-stopped
+        networks: 
+            - webnet
+
+        
