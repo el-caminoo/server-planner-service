@@ -52,3 +52,11 @@ $ npm run test
 or
 
 $ yarn run test
+```
+
+
+## Documentation
+
+Below is a link to the API documentation and sample request.
+
+[This is the link to API documentation] (https://documenter.getpostman.com/view/7478472/UVXkmuYE)

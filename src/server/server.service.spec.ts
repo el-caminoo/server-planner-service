@@ -1,6 +1,5 @@
 import { ServerService } from './server.service';
 
-      // Test Variables
 describe('Testing middleware/helper function', () => {
 
   var serverType = {CPU: 2, RAM: 32, HDD: 100}

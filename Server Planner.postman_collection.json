@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "6d90d8bd-49ed-44f0-88f9-e66b0e134152",
+		"name": "Server Planner",
+		"description": "Write an API that calculates the server hardware for a data center (to host virtual machines). Your API should return the number of servers that are required to host a non-empty collection of virtual machines.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/server",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"severType\": {\"CPU\": 2, \"RAM\": 32, \"HDD\": 100},\n    \"virtualMachines\": [{\"CPU\": 1, \"RAM\": 16, \"HDD\": 10}, {\"CPU\": 1,\"RAM\": 16,\"HDD\": 10}, {\"CPU\": 2,\"RAM\": 32,\"HDD\": 100}]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/server",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"server"
+					]
+				},
+				"description": "Write an API that calculates the server hardware for a data center (to host virtual machines). Your API should return the number of servers that are required to host a non-empty collection of virtual machines."
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "c0414990-a435-4a09-ae8b-884090d59471",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "b263dac7-f761-4e95-a8fa-3ba3f535bbfc",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
