@@ -5,7 +5,7 @@ import {VirtualMachine, Server} from './server.interface';
 @Injectable()
 export class ServerService {
 
-    private resolve(serverType: Server, virtualMachines: Array<VirtualMachine>): number {
+    public resolve(serverType: Server, virtualMachines: Array<VirtualMachine>): number {
         var currentState = serverType;
         var count = 1;
 

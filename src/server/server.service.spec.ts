@@ -1,18 +1,21 @@
-import { Test, TestingModule } from '@nestjs/testing';
 import { ServerService } from './server.service';
 
-describe('ServerService', () => {
-  let service: ServerService;
+      // Test Variables
+describe('Testing middleware/helper function', () => {
 
-  beforeEach(async () => {
-    const module: TestingModule = await Test.createTestingModule({
-      providers: [ServerService],
-    }).compile();
+  var serverType = {CPU: 2, RAM: 32, HDD: 100}
+  var virtualMachines = [{CPU: 1, RAM: 16, HDD: 10}, {CPU: 1, RAM: 16, HDD: 10}, {CPU: 2, RAM: 32, HDD: 100}]
 
-    service = module.get<ServerService>(ServerService);
+  var serviceObect = new ServerService();
+  var result = serviceObect.calculate(serverType, virtualMachines);
+
+  it("The parameters should be of correct types", () => {
+    expect(serverType).toBeInstanceOf(Object)
+    expect(virtualMachines).toBeInstanceOf(Array)
   });
 
-  it('should be defined', () => {
-    expect(service).toBeDefined();
+  it("Should be equal to 2", () => {
+    expect(result).toBe(2)
   });
+
 });
